@@ -12,6 +12,7 @@ module.exports = {
             .setImage(client.user.displayAvatarURL())
             .setThumbnail(client.user.displayAvatarURL())
             .setTimestamp(Date.now())
+            .setAuthor('AuthorName') //this may cause problems
             .addFields([
                 {
                     name: `Field 1`,
