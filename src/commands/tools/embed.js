@@ -25,6 +25,7 @@ module.exports = {
                     text: client.user.tag
                 }
             )
+            .setURL(`https://github.com/Blue1818/myfirstdiscordbot`)
             .addFields([
                 {
                     name: `Field 1`,
