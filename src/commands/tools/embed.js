@@ -12,7 +12,19 @@ module.exports = {
             .setImage(client.user.displayAvatarURL())
             .setThumbnail(client.user.displayAvatarURL())
             .setTimestamp(Date.now())
-            .setAuthor('AuthorName') //this may cause problems
+            .setAuthor(         //this may cause problems
+                {
+                    url: `https://github.com/Blue1818`,
+                    iconURL: interaction.user.displayAvatarURL(),
+                    name: interaction.user.tag
+                }
+            )
+            .setFooter(
+                {
+                    iconURL: client.user.displayAvatarURL(),
+                    text: client.user.tag
+                }
+            )
             .addFields([
                 {
                     name: `Field 1`,
