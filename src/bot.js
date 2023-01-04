@@ -11,6 +11,7 @@ client.commands = new Collection();
 //client.colour = "";
 client.commandArray = [];
 
+
 const functionFolders = fs.readdirSync(`./src/functions`); // ` <- instead of ' is so weird.
 for (const folder of functionFolders) {
     const functionFiles = fs
