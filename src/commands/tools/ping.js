@@ -9,9 +9,9 @@ module.exports = {
             fetchReply: true
         });
 
-        const newMessage = `API: ${client.ws.ping}\nClient Ping: ${message.createdTimestamp - interaction.createdTimestamp}`
+        const newMessage = `API: ${client.ws.ping}\nClient Ping: ${message.createdTimestamp - interaction.createdTimestamp}`;
         await interaction.editReply({
             content: newMessage
         });
-    }
-}
+    },
+};
