@@ -37,6 +37,12 @@ module.exports = {
                     value: `Field value 2`,
                     inline: true
                 }
-            ])
+            ]);
+
+            await interaction.reply(
+                {
+                    embeds: [embed]
+                }
+            );
     },
 };
