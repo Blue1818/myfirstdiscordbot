@@ -22,12 +22,13 @@ module.exports = (client) => {
 
         const clientId = '1059946227216678932';
         const guildId = '1059948359760224376'; //use only if you want your bot to only work in one server
-        const rest = new REST({ version: "9" }).setToken(process.env.token);
+        const rest = new REST({ version: "9" }).setToken(process.env.token1);
         try {
             console.log("Started refreshing application (/) commands.");
             
-            await rest.put(routes.applicationGuildCommands(clientId, guildId), {
-                body: commands,
+            //await rest.put(Routes.applicationCommands(clientId, guildId), { //for if you dont use a guild id
+            await rest.put(Routes.applicationGuildCommands(clientId, guildId), {
+                body: client.commandArray, 
             });
 
             console.log("Successfully reloaded application (/) commands.");

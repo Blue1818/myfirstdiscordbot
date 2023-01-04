@@ -1,8 +1,8 @@
-const { } = require('discord.js');
+const { SlashCommandBuilder } = require('discord.js');
 
 module.exports = {
     data: new SlashCommandBuilder()
-        .setName('pint')
+        .setName('ping')
         .setDescription('Return my ping!'),
     async execute(interaction, client) {
         const message = await interaction.deferReply({
